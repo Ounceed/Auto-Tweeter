@@ -1,11 +1,11 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from time import sleep
-driver = webdriver.Chrome(executable_path="your chromedriver path here")
+driver = webdriver.Chrome(executable_path="your chromedriver path here") # enter your chrome driver download path
 driver.get("https://twitter.com/login")
 sleep(3)
-driver.find_element_by_name('session[username_or_email]').send_keys("your email or username")
-driver.find_element_by_name('session[password]').send_keys("password here")
+driver.find_element_by_name('session[username_or_email]').send_keys("your email or username") # your twitter accounts email or username
+driver.find_element_by_name('session[password]').send_keys("password here") # twitter accounts password
 driver.find_element_by_name('session[password]').send_keys(Keys.RETURN)
 sleep(3)
 
